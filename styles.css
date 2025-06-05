@@ -1,0 +1,219 @@
+/* styles.css - Floricultura Encanto das Flores */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffe3e3 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.header {
+    background: #fff0f6;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(255, 192, 203, 0.1);
+}
+.header h1 {
+    margin: 0 0 0.5rem 0;
+    color: #d72660;
+    font-size: 2.2rem;
+    font-family: 'Segoe Script', cursive;
+}
+.header nav {
+    display: flex;
+    gap: 1.5rem;
+}
+.header nav a {
+    color: #d72660;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.header nav a:hover {
+    color: #a61e4d;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 2rem 4rem 2rem;
+    position: relative;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(215, 38, 96, 0.25);
+    z-index: 1;
+}
+.hero h2, .hero p, .hero .btn {
+    position: relative;
+    z-index: 2;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Segoe Script', cursive;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.btn {
+    background: #d72660;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(215, 38, 96, 0.15);
+}
+.btn:hover {
+    background: #a61e4d;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fff0f6 0%, #ffe3e3 100%);
+}
+.form-box {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(215, 38, 96, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    min-width: 320px;
+    max-width: 350px;
+}
+.form-box h2 {
+    color: #d72660;
+    margin-bottom: 1rem;
+    font-family: 'Segoe Script', cursive;
+}
+.form-box input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ffd6e0;
+    border-radius: 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+.form-box input:focus {
+    border: 1.5px solid #d72660;
+}
+.form-box button {
+    background: #d72660;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+}
+.form-box button:hover {
+    background: #a61e4d;
+}
+.form-box p {
+    text-align: center;
+    font-size: 0.95rem;
+}
+.form-box a {
+    color: #d72660;
+    text-decoration: underline;
+}
+
+.produtos {
+    padding: 3rem 2rem 2rem 2rem;
+    background: #fff0f6;
+    text-align: center;
+}
+.produtos h3 {
+    color: #d72660;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Segoe Script', cursive;
+}
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+.produto-card {
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 12px rgba(215, 38, 96, 0.08);
+    padding: 1.5rem 1rem;
+    max-width: 250px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.produto-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(215, 38, 96, 0.15);
+}
+.produto-card img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.produto-card h4 {
+    color: #d72660;
+    margin: 0.5rem 0 0.3rem 0;
+    font-size: 1.1rem;
+}
+.produto-card p {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer {
+    background: #fff0f6;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    color: #a61e4d;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.3rem;
+    }
+    .hero {
+        padding: 3rem 1rem 2rem 1rem;
+    }
+    .form-box {
+        min-width: 90vw;
+        max-width: 95vw;
+        padding: 1.5rem 0.5rem;
+    }
+    .produtos {
+        padding: 2rem 0.5rem 1rem 0.5rem;
+    }
+    .produtos h3 {
+        font-size: 1.3rem;
+    }
+    .produtos-grid {
+        gap: 1rem;
+    }
+    .produto-card {
+        padding: 1rem 0.5rem;
+        max-width: 95vw;
+    }
+}
